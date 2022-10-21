@@ -1,6 +1,5 @@
 import React, { useState, useRef, useMemo, useCallback } from 'react';
 
-
 // reactstrap components
 import {
   Container,
@@ -25,7 +24,6 @@ function HomePage() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
-  
   
   React.useEffect(() => {
     document.body.classList.add("Home-page");

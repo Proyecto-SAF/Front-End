@@ -4245,7 +4245,7 @@ body {
   cursor: pointer;
 }
 img {
-  max-width: 100%;
+  max-width: 150%;
   border-radius: 1px;
 }
 .img-raised {

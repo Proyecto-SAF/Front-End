@@ -66,12 +66,11 @@ function ProfilePage() {
                 Follow me on Instagram
               </UncontrolledTooltip>
             </div>
-            <h3 className="title">About me</h3>
+            <h3 className="title">Sobre Mi</h3>
             <h5 className="description">
-              An artist of considerable range, Ryan — the name taken by
-              Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-              and records all of his own music, giving it a warm, intimate feel
-              with a solid groove structure. An artist of considerable range.
+              Soy un productor oriundo de Riacho He he pongo todo de mi en 
+              lo que hago siento que mi trabajo habla por mi mismo y mi produccion
+              de igual manera.
             </h5>
             <Row>
               <Col className="ml-auto mr-auto" md="6">
@@ -164,7 +163,7 @@ function ProfilePage() {
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg11.jpg")}
+                          src={require("assets/img/bg11.jpeg")}
                         ></img>
                       </Col>
                       <Col md="6">
