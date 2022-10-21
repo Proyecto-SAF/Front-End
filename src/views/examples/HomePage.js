@@ -1,4 +1,7 @@
 import React, { useState, useRef, useMemo, useCallback } from 'react';
+import { Link } from "react-router-dom";
+import '../../components/Headers/App.css' 
+import MapView from 'components/Headers/MapView';
 
 // reactstrap components
 import {
@@ -8,13 +11,16 @@ import {
   Navbar,
   NavItem,
   NavLink,
-  Nav
+  Nav,
+  Row,
+  Col
 } from "reactstrap";
 
 
 
 // core components
 import HomePageHeader from "components/Headers/HomePageHeader";
+import IndexNavbar from 'components/Navbars/IndexNavbar';
 import CarouselSection from "views/index-sections/Carousel";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import {Label, FormGroup} from "reactstrap";
@@ -36,63 +42,27 @@ function HomePage() {
   }, []);
   return (
     <>
-      <Navbar className="bg-info" expand="lg">
-              <Container>
-                <div className="navbar-translate">
-                  <NavbarBrand
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Info Color
-                  </NavbarBrand>
-                  <button
-                    onClick={() => {
-                      document.documentElement.classList.toggle("nav-open");
-                      setCollapseOpen(!collapseOpen);
-                    }}
-                    aria-expanded={collapseOpen}
-                    className="navbar-toggler"
-                    type="button"
-                  >
-                    <span className="navbar-toggler-bar bar1"></span>
-                    <span className="navbar-toggler-bar bar2"></span>
-                    <span className="navbar-toggler-bar bar3"></span>
-                  </button>
-                </div>
-                <Collapse isOpen={collapseOpen} navbar>
-                  <Nav className="ml-auto" navbar>
-                    <NavItem className="active">
-                      <NavLink
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <p>Discover</p>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <p>Profile</p>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <p>Settings</p>
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </Collapse>
-              </Container>
-            </Navbar>
-      <div className="wrapper">
+    <IndexNavbar />
         <HomePageHeader />
+        <br></br>
+        <Row>
+        <MapView />
+        <Col md="5">
+                  <div
+                    className="image-container image-right"
+                    style={{
+                      backgroundImage:
+                        "url(" + require("assets/img/bg1.jpg") + ")"
+                    }}
+                  ></div>
+        <h3>
+                    So what does the new record for the lowest level of winter
+                    ice actually mean
+                  </h3>
+        </Col>
+                  </Row>
         <DefaultFooter />
-      </div>
+      
     </>
   );
 }
