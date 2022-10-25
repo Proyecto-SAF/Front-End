@@ -116,12 +116,12 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink to="/login-page" tag={Link}>
+                <NavLink to="/SignUp-page" tag={Link}>
                   INICIAR SESION
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/register-page" tag={Link}>
+                <NavLink to="/login-page" tag={Link}>
                   REGISTRARSE
                 </NavLink>
               </NavItem>

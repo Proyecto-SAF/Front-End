@@ -13,6 +13,7 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import RegisterPage from "views/examples/RegisterPage";
 import LandingPage from "views/examples/LandingPage.js";
+import SignUpPage from "../src/views/index-sections/SignUp.js";
 import HomePage from "views/examples/HomePage";
 import ProfilePage from "views/examples/ProfilePage.js";
 
@@ -38,6 +39,10 @@ root.render(
         <Route
           path="/profile-page"
           render={(props) => <ProfilePage {...props} />}
+        />
+        <Route
+          path="/SignUp-page"
+          render={(props) => <SignUpPage {...props} />}
         />
         <Route
           path="/login-page"

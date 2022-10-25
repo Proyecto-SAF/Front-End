@@ -55,10 +55,8 @@ function HomePage() {
                         "url(" + require("assets/img/bg1.jpg") + ")"
                     }}
                   ></div>
-        <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
-                  </h3>
+        <h3>Pasa el cursor cerca de tu punto mas cercano y veras en que momento se 
+          realizara el programa soverania alimentaria formoseña</h3>
         </Col>
                   </Row>
         <DefaultFooter />

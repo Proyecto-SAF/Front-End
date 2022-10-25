@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar";
+import TransparentFooter from "components/Footers/TransparentFooter";
 // reactstrap components
 import {
   Button,
@@ -25,10 +27,11 @@ function SignUp() {
   const [emailFocus, setEmailFocus] = React.useState(false);
   return (
     <>
+    <ExamplesNavbar />
       <div
         className="section section-signup"
         style={{
-          backgroundImage: "url(" + require("assets/img/bg11.jpeg") + ")",
+          backgroundImage: "url(" + require("assets/img/fondo_sing.jfif") + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center",
           minHeight: "700px"
@@ -40,7 +43,7 @@ function SignUp() {
               <Form action="" className="form" method="">
                 <CardHeader className="text-center">
                   <CardTitle className="title-up" tag="h3">
-                    Sign Up
+                    Iniciar Sesion
                   </CardTitle>
                   <div className="social-line">
                     <Button
@@ -73,40 +76,6 @@ function SignUp() {
                 <CardBody>
                   <InputGroup
                     className={
-                      "no-border" + (firstFocus ? " input-group-focus" : "")
-                    }
-                  >
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="now-ui-icons users_circle-08"></i>
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      placeholder="First Name..."
-                      type="text"
-                      onFocus={() => setFirstFocus(true)}
-                      onBlur={() => setFirstFocus(false)}
-                    ></Input>
-                  </InputGroup>
-                  <InputGroup
-                    className={
-                      "no-border" + (lastFocus ? " input-group-focus" : "")
-                    }
-                  >
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="now-ui-icons text_caps-small"></i>
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      placeholder="Last Name..."
-                      type="text"
-                      onFocus={() => setLastFocus(true)}
-                      onBlur={() => setLastFocus(false)}
-                    ></Input>
-                  </InputGroup>
-                  <InputGroup
-                    className={
                       "no-border" + (emailFocus ? " input-group-focus" : "")
                     }
                   >
@@ -122,6 +91,24 @@ function SignUp() {
                       onBlur={() => setEmailFocus(false)}
                     ></Input>
                   </InputGroup>
+                  <InputGroup
+                    className={
+                      "no-border" + (lastFocus ? " input-group-focus" : "")
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons objects_key-25"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Contraseña"
+                      type="password"
+                      onFocus={() => setLastFocus(true)}
+                      onBlur={() => setLastFocus(false)}
+                    ></Input>
+                  </InputGroup>
+                
                 </CardBody>
                 <CardFooter className="text-center">
                   <Button
@@ -131,7 +118,7 @@ function SignUp() {
                     onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
-                    Get Started
+                    Enviar
                   </Button>
                 </CardFooter>
               </Form>
@@ -146,11 +133,12 @@ function SignUp() {
               size="lg"
               tag={Link}
             >
-              View Login Page
+              Registrarte
             </Button>
           </div>
         </Container>
       </div>
+      <TransparentFooter />
     </>
   );
 }

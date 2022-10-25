@@ -69,14 +69,14 @@ const MapView = () => {
                                 draw={{
                                     rectangle: false,
                                     package: false,
-                                    polyline: false,
+                                    polygon: false,
                                     circle: false,
                                     circlemarker: false,
                                     marker: true,
                                 }} 
                             />
                         <Popup>
-                            SAF
+                            Viernes desde 09 AM hasta 13 PM
                         </Popup>
                         </FeatureGroup>
                         <TileLayer

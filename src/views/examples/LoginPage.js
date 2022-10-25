@@ -58,6 +58,24 @@ function LoginPage() {
                     </div>
                   </CardHeader>
                   <CardBody>
+                  <InputGroup
+                      className={
+                        "no-border input-lg" +
+                        (firstFocus ? " input-group-focus" : "")
+                      }
+                    >
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="now-ui-icons business_badge"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Nombre completo"
+                        type="text"
+                        onFocus={() => setFirstFocus(true)}
+                        onBlur={() => setFirstFocus(false)}
+                      ></Input>
+                    </InputGroup>
                     <InputGroup
                       className={
                         "no-border input-lg" +
