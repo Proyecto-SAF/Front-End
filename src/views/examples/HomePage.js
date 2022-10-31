@@ -1,17 +1,10 @@
-import React, { useState, useRef, useMemo, useCallback } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react';
 import '../../components/Headers/App.css' 
 import MapView from 'components/Headers/MapView';
+import Iframe from 'react-iframe'
 
 // reactstrap components
 import {
-  Container,
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
   Row,
   Col
 } from "reactstrap";
@@ -21,16 +14,10 @@ import {
 // core components
 import HomePageHeader from "components/Headers/HomePageHeader";
 import IndexNavbar from 'components/Navbars/IndexNavbar';
-import CarouselSection from "views/index-sections/Carousel";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import {Label, FormGroup} from "reactstrap";
 
 
 function HomePage() {
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
-  
   React.useEffect(() => {
     document.body.classList.add("Home-page");
     document.body.classList.add("sidebar-collapse");
@@ -57,7 +44,8 @@ function HomePage() {
                   ></div>
         <h3>Pasa el cursor cerca de tu punto mas cercano y veras en que momento se 
           realizara el programa soverania alimentaria formoseña</h3>
-        </Col>
+          <div class="map">
+          <Iframe allowFullScreen style="border: none;" height="500" width="600" src="http://localhost:8082/mapstore/#/context/RegionesPROD"></Iframe></div>  </Col>
                   </Row>
         <DefaultFooter />
       

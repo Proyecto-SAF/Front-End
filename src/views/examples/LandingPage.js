@@ -301,14 +301,14 @@ function LandingPage() {
                 <Label check>
                   <Input type="checkbox"></Input>
                   <span className="form-check-sign"></span>
-                  Unchecked
+                  si
                 </Label>
               </FormGroup>
               <FormGroup check>
                 <Label check>
                   <Input defaultChecked type="checkbox"></Input>
                   <span className="form-check-sign"></span>
-                  Checked
+                  no
                 </Label>
               </FormGroup>
                 <div className="textarea-container">

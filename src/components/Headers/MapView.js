@@ -1,13 +1,20 @@
 import React, { useState, useRef} from 'react'
-
+import L from "leaflet";
 import { MapContainer, TileLayer, FeatureGroup, Popup, Marker } from 'react-leaflet';
-import { EditControl } from 'react-leaflet-draw';
+import { EditControl} from 'react-leaflet-draw';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-draw/dist/leaflet.draw.css'
-
  
-const MapView = () => {
 
+const MapView = () => {
+  L.Icon.Default.mergeOptions({
+    iconRetinaUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-icon.png",
+    iconUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-icon.png",
+    shadowUrl:
+      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-shadow.png",
+  });
 
     const [center, setCenter] = useState({ lat: '-26.18064675300086', lng: '-58.188628961794805' });
     const [mapLayers, setMapLayers] = useState([]);
@@ -17,7 +24,7 @@ const MapView = () => {
         console.log(e);
     
         const { layerType, layer } = e;
-        if (layerType === "polygon") {
+        if (layerType === "marker") {
           const { _leaflet_id } = layer;
     
           setMapLayers((layers) => [
@@ -70,21 +77,24 @@ const MapView = () => {
                                     rectangle: false,
                                     package: false,
                                     polygon: false,
+                                    polyline: false,
                                     circle: false,
                                     circlemarker: false,
-                                    marker: true,
+                              
                                 }} 
                             />
-                        <Popup>
-                            Viernes desde 09 AM hasta 13 PM
-                        </Popup>
+                             <Popup>
+                <div className="text-center">
+Aqui se realiza el programa SAF
+                </div>
+            </Popup>
                         </FeatureGroup>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />    
                     </MapContainer>
-                    <pre className="text-left">{JSON.stringify(mapLayers, 0, 2)}</pre>
+                    
                     </div>
             </div>
     </div> 

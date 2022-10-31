@@ -11,7 +11,7 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
-import RegisterPage from "views/examples/RegisterPage";
+import RegisterProdPage from "views/examples/RegisterProdPage";
 import LandingPage from "views/examples/LandingPage.js";
 import SignUpPage from "../src/views/index-sections/SignUp.js";
 import HomePage from "views/examples/HomePage";
@@ -49,11 +49,11 @@ root.render(
           render={(props) => <LoginPage {...props} />}
         />
         <Route
-          path="/register-page"
-          render={(props) => <RegisterPage {...props} />}
+          path="/registerprod-page"
+          render={(props) => <RegisterProdPage {...props} />}
         />
-        <Redirect to="/index" />
-        <Redirect from="/" to="/index" />
+        <Redirect to="/landing-page" />
+        <Redirect from="/" to="/landing-page" />
       </Switch>
     </Switch>
   </BrowserRouter>

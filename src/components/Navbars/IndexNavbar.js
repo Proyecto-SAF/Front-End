@@ -89,12 +89,14 @@ function IndexNavbar() {
                   <p>Actividades</p>
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem to="../../views/examples/ProfilePage.js" tag={Link}>
+                  <DropdownItem>
+                    <NavLink  to="../../views/examples/ProfilePage.js" tag={Link}>
                     <i className="now-ui-icons users_single-02"></i>
                     Perfil
+                    </NavLink>
                   </DropdownItem>
                   <DropdownItem
-                    href=""
+                    href="../../views/index-sections/Images.js"
                     target="_blank"
                   >
                     <i className="now-ui-icons education_agenda-bookmark"></i>
