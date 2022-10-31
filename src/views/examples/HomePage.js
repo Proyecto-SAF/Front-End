@@ -34,6 +34,8 @@ function HomePage() {
         <br></br>
         <Row>
         <MapView />
+        <div>
+          <Iframe allowFullScreen style="border: none;" height="500" width="800" src="http://localhost:8082/mapstore/#/context/RegionesPROD"></Iframe></div> 
         <Col md="5">
                   <div
                     className="image-container image-right"
@@ -44,8 +46,7 @@ function HomePage() {
                   ></div>
         <h3>Pasa el cursor cerca de tu punto mas cercano y veras en que momento se 
           realizara el programa soverania alimentaria formoseña</h3>
-          <div class="map">
-          <Iframe allowFullScreen style="border: none;" height="500" width="600" src="http://localhost:8082/mapstore/#/context/RegionesPROD"></Iframe></div>  </Col>
+       </Col>
                   </Row>
         <DefaultFooter />
       
