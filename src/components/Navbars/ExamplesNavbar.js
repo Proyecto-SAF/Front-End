@@ -78,8 +78,8 @@ function ExamplesNavbar() {
                 Something else here
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Separated link
+              <DropdownItem href="/maparegprod-page" onClick={(e) => e.preventDefault()}>
+                Mapa de producción por regiones
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -88,13 +88,10 @@ function ExamplesNavbar() {
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
-            <NavbarBrand
-              to="/landing-page" tag={Link}
-              target="_blank"
-              id="navbar-brand"
+            <NavLink  to="/landing-page" tag={Link}
             >
               SAF
-            </NavbarBrand>
+            </NavLink>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {

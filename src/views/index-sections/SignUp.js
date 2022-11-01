@@ -140,7 +140,7 @@ window.localStorage.setItem(
       <div
         className="section section-signup"
         style={{
-          backgroundImage: "url(" + require("assets/img/fondo_sing.jfif") + ")",
+          backgroundImage: "url(" + require("assets/img/fondo_sing.jpg") + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center",
           minHeight: "700px"

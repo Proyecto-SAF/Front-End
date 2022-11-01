@@ -16,6 +16,7 @@ import LandingPage from "views/examples/LandingPage.js";
 import SignUpPage from "../src/views/index-sections/SignUp.js";
 import HomePage from "views/examples/HomePage";
 import ProfilePage from "views/examples/ProfilePage.js";
+import MapaRegProdPage from "components/Headers/MapaRegProd.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -39,6 +40,10 @@ root.render(
         <Route
           path="/profile-page"
           render={(props) => <ProfilePage {...props} />}
+        />
+        <Route
+          path="/maparegprod-page"
+          render={(props) => <MapaRegProdPage {...props} />}
         />
         <Route
           path="/SignUp-page"

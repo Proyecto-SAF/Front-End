@@ -207,17 +207,16 @@ setResgistrado(true)
                         onChange={(e)=>{setPassword(e.target.value)}}
                       ></Input>
                     </InputGroup>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                  <Button
+                    <Button
                     className="btn-neutral btn-round"
                     color="info"
                     disabled={habilitado ? false : true}
                     onClick={resgistroNuevoUsu}
                     size="lg"
-                  >
-             {habilitado ? "Aceptar" : "Aceptar"}
+                  >{habilitado ? "Aceptar" : "Aceptar"}
                   </Button>
+                  </CardBody>
+                  <CardFooter className="text-center">
                     <div className="pull-left">
                       <h6>
                         <a

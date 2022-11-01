@@ -1,6 +1,5 @@
 import React from 'react';
-import '../../components/Headers/App.css' 
-import MapView from 'components/Headers/MapView';
+import '../../components/Headers/App.css'
 import Iframe from 'react-iframe'
 
 // reactstrap components
@@ -17,7 +16,7 @@ import IndexNavbar from 'components/Navbars/IndexNavbar';
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
 
-function HomePage() {
+function MapaRegProdPage() {
   React.useEffect(() => {
     document.body.classList.add("Home-page");
     document.body.classList.add("sidebar-collapse");
@@ -33,7 +32,6 @@ function HomePage() {
         <HomePageHeader />
         <br></br>
         <Row>
-        <MapView />
            <br></br>
         <Col md="5">
                   <div
@@ -57,4 +55,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default MapaRegProdPage;

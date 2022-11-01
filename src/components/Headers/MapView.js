@@ -4,7 +4,6 @@ import { MapContainer, TileLayer, FeatureGroup, Popup, Marker } from 'react-leaf
 import { EditControl} from 'react-leaflet-draw';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-draw/dist/leaflet.draw.css'
- 
 
 const MapView = () => {
   L.Icon.Default.mergeOptions({

@@ -89,12 +89,10 @@ function IndexNavbar() {
                   <p>Actividades</p>
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>
-                    <NavLink  to="../../views/examples/ProfilePage.js" tag={Link}>
+                  <NavLink color="default" to="/profile-page" tag={Link}>
                     <i className="now-ui-icons users_single-02"></i>
                     Perfil
-                    </NavLink>
-                  </DropdownItem>
+                  </NavLink>
                   <DropdownItem
                     href="../../views/index-sections/Images.js"
                     target="_blank"
@@ -108,12 +106,13 @@ function IndexNavbar() {
                 <Button
                   className="nav-link btn-neutral"
                   color="info"
-                  href="../../views./"
+                  href="/registerprod-page"
                   id="upgrade-to-pro"
                   target="_blank"
                 >
                   <i className="now-ui-icons users_circle-08 "></i>
-                  <p>REGISTRATE</p>
+
+                  <p>ZONA PRODUCTOR</p>
                 </Button>
                 <UncontrolledTooltip target="#upgrade-to-pro">
                   Registrate como productor!!
