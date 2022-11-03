@@ -112,7 +112,6 @@ const postData = await fetch("https://plataforma-saf-back.onrender.com/auth/logi
 const respu = await postData.json()
 console.log(respu)
 
-
 const {token}=respu
 console.log(token)
 setLogeado(true)
@@ -233,10 +232,8 @@ window.localStorage.setItem(
           </Row>
           <div className="col text-center">
             <Button
-              className="btn-round btn-white"
-              color="default"
+              className="btn-neutral btn-round"
               to="/login-page"
-              outline
               size="lg"
               tag={Link}
             >

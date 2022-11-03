@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 // reactstrap components
 import {
   Button,
@@ -19,13 +20,11 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
-
 import * as yup from "yup";
-
 let ProductorShema = yup.object().shape({
   nro_renspa: yup.string().required(),
-  localidad: yup.string().required(),
   provincia: yup.string().required(),
+  localidad: yup.string().required(),
   description: yup.string().required(),
 
 })
@@ -65,7 +64,7 @@ function RegisterProdPage() {
 
 
   useEffect(()=> {
-    ProductorShema.isValid({nro_renspa, localidad, provincia, descripcion})
+    ProductorShema.isValid({nro_renspa, provincia, localidad, descripcion})
     .then(
       (valid) => {
         if(valid){
@@ -75,7 +74,7 @@ function RegisterProdPage() {
         }
       }
     )
-  },[nro_renspa, localidad, provincia, descripcion,  ProductorShema]);
+  },[nro_renspa, provincia, localidad, descripcion,  ProductorShema]);
 
 
 
@@ -109,8 +108,8 @@ myHeaders.append("Content-Type","application/json");
 
 const raw = {
   nro_renspa,
-  localidad,
   provincia,
+  localidad,
   descripcion
 
 }
@@ -203,7 +202,7 @@ setResgistrado(true)
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons ui-1_lock-circle-open"></i>
+                          <i className="now-ui-icons location_world"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -220,7 +219,7 @@ setResgistrado(true)
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons ui-1_lock-circle-open"></i>
+                          <i className="now-ui-icons location_pin"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -237,7 +236,7 @@ setResgistrado(true)
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons ui-1_lock-circle-open"></i>
+                          <i className="now-ui-icons education_paper"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -247,14 +246,12 @@ setResgistrado(true)
                       ></Input>
                     </InputGroup>
                     <Button
-                      className="btn-neutral btn-round"
-                      color="info"
-                      disabled={habilitado ? false : true}
-                      onClick={resgistroNuevoProd}
-                      size="lg"
-                    >
-                      {habilitado ? "Aceptar" : "Aceptar"}
-                    </Button>
+                    className="btn-neutral btn-round"
+                    color="info"
+                    onClick={resgistroNuevoProd}
+                    size="lg"
+                  >ENVIAR
+                  </Button>
                   </CardBody>
                   <CardFooter className="text-center">
                     <div className="pull-left">

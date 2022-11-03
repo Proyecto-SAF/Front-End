@@ -2,13 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
-  Button,
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   UncontrolledDropdown,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
@@ -17,7 +12,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function IndexNavbar() {
+function ProfileNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -50,12 +45,14 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
         <Container>
+          <UncontrolledDropdown className="button-dropdown">
+          </UncontrolledDropdown>
           <div className="navbar-translate">
-            <NavLink  to="/landing-page" tag={Link}
+            <NavLink  to="/home-page" tag={Link}
             >
-              S.A.F
+              SAF
             </NavLink>
             <button
               className="navbar-toggler navbar-toggler"
@@ -77,35 +74,45 @@ function IndexNavbar() {
             navbar
           >
             <Nav navbar>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#"
-                  nav
-                  onClick={(e) => e.preventDefault()}
+              <NavItem>
+                <NavLink
+                  href="https://twitter.com/CreativeTim?ref=creativetim"
+                  target="_blank"
+                  id="twitter-tooltip"
                 >
-                  <i className="now-ui-icons design_app mr-1"></i>
-                  <p>Actividades</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <NavLink color="black" to="/profile-page" tag={Link}>
-                    <i className="now-ui-icons users_single-02"></i>
-                    Perfil
-                  </NavLink>
-                  <DropdownItem
-                    href="../../views/index-sections/Images.js"
-                    target="_blank"
-                  >
-                    <i className="now-ui-icons education_agenda-bookmark"></i>
-                    Recetarios
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <NavLink color="default" to="/registerprod-page" tag={Link}>
-                  <i className="now-ui-icons users_circle-08 "></i>
-                  ZONA PRODUCTOR
-              </NavLink>
+                  <i className="fab fa-twitter"></i>
+                  <p className="d-lg-none d-xl-none">Twitter</p>
+                </NavLink>
+                <UncontrolledTooltip target="#twitter-tooltip">
+                  Follow us on Twitter
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  target="_blank"
+                  id="facebook-tooltip"
+                >
+                  <i className="fab fa-facebook-square"></i>
+                  <p className="d-lg-none d-xl-none">Facebook</p>
+                </NavLink>
+                <UncontrolledTooltip target="#facebook-tooltip">
+                  Like us on Facebook
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  target="_blank"
+                  id="instagram-tooltip"
+                >
+                  <i className="fab fa-instagram"></i>
+                  <p className="d-lg-none d-xl-none">Instagram</p>
+                </NavLink>
+                <UncontrolledTooltip target="#instagram-tooltip">
+                  Follow us on Instagram
+                </UncontrolledTooltip>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>
@@ -114,4 +121,4 @@ function IndexNavbar() {
   );
 }
 
-export default IndexNavbar;
+export default ProfileNavbar;

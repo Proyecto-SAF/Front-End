@@ -15,26 +15,18 @@ function DefaultFooter() {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=nukr-default-footer"
+                  href=""
                   target="_blank"
                 >
-                  Creative Tim
+                  Sobre Nosotros
                 </a>
               </li>
               <li>
                 <a
-                  href="http://presentation.creative-tim.com?ref=nukr-default-footer"
+                  href=""
                   target="_blank"
                 >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://blog.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
-                >
-                  Blog
+                  Gobierno de la Provincia
                 </a>
               </li>
             </ul>

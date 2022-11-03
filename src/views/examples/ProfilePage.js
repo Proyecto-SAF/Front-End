@@ -1,5 +1,5 @@
 import React from "react";
-
+import Iframe from "react-iframe";
 // reactstrap components
 import {
   Button,
@@ -11,11 +11,11 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import ProfileNavbar from "components/Navbars/ProfileNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
@@ -34,7 +34,7 @@ function ProfilePage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <ProfileNavbar />
       <div className="wrapper">
         <ProfilePageHeader />
         <div className="section">
@@ -68,10 +68,63 @@ function ProfilePage() {
             </div>
             <h3 className="title">Sobre Mi</h3>
             <h5 className="description">
-              Soy un productor oriundo de Riacho He he pongo todo de mi en 
-              lo que hago siento que mi trabajo habla por mi mismo y mi produccion
+              Soy un productor oriundo de Riacho He he pongo todo de mi en lo
+              que hago siento que mi trabajo habla por mi mismo y mi produccion
               de igual manera.
             </h5>
+            <Col className="ml-auto mr-auto" md="6">
+              <h4 className="title text-center">
+                Mapa de produccion por Regiones
+              </h4>
+              <div className="nav-align-center">
+                <Nav
+                  className="nav-pills-info nav-pills-just-icons"
+                  pills
+                  role="tablist"
+                >
+                  <NavItem>
+                    <NavLink
+                      className={pills === "3" ? "active" : ""}
+                      href="#pablo"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setPills("3");
+                      }}
+                    >
+                      <i className="now-ui-icons location_map-big"></i>
+                    </NavLink>
+                  </NavItem>
+                </Nav>
+              </div>
+            </Col>
+            <TabContent className="gallery" activeTab={"pills" + pills}>
+              <TabPane tabId="pills1">
+                <Col className="ml-auto mr-auto" md="10"></Col>
+              </TabPane>
+              <TabPane tabId="pills2">
+                <Col className="ml-auto mr-auto" md="10">
+                  <Row className="collections"></Row>
+                </Col>
+              </TabPane>
+              <TabPane tabId="pills3">
+                <Col className="ml-auto mr-auto" md="10">
+                  <Row className="collections">
+                    <Col md="6">
+                      <div>
+                        <Iframe
+                          allowFullScreen
+                          style="border: none;"
+                          height="500"
+                          width="800"
+                          src="http://localhost:8082/mapstore/#/context/RegionesPROD"
+                        ></Iframe>
+                      </div>
+                    </Col>
+                  </Row>
+                </Col>
+              </TabPane>
+            </TabContent>
+            {/*  
             <Row>
               <Col className="ml-auto mr-auto" md="6">
                 <h4 className="title text-center">My Portfolio</h4>
@@ -207,12 +260,15 @@ function ProfilePage() {
                           className="img-raised"
                           src={require("assets/img/bg6.jpg")}
                         ></img>
+                        <div>
+          <Iframe allowFullScreen style="border: none;" height="500" width="800" src="http://localhost:8082/mapstore/#/context/RegionesPROD"></Iframe></div> 
+       
                       </Col>
                     </Row>
                   </Col>
                 </TabPane>
               </TabContent>
-            </Row>
+            </Row> */}
           </Container>
         </div>
         <DefaultFooter />
