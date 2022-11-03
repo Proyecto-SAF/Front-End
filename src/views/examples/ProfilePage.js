@@ -16,6 +16,7 @@ import {
 
 // core components
 import ProfileNavbar from "components/Navbars/ProfileNavbar.js";
+import Agenda2 from "components/Headers/Agenda";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
@@ -94,6 +95,18 @@ function ProfilePage() {
                       <i className="now-ui-icons location_map-big"></i>
                     </NavLink>
                   </NavItem>
+                  <NavItem>
+                      <NavLink
+                        className={pills === "2" ? "active" : ""}
+                        href="#pablo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setPills("2");
+                        }}
+                      >
+                        <i className="now-ui-icons location_world"></i>
+                      </NavLink>
+                    </NavItem>
                 </Nav>
               </div>
             </Col>
@@ -123,6 +136,15 @@ function ProfilePage() {
                   </Row>
                 </Col>
               </TabPane>
+              <TabPane tabId="pills2">
+                  <Col className="ml-auto mr-auto" md="40">
+                    <Row className="collections">
+                      <Col md="12">
+                        <Agenda2 />
+                      </Col>
+                    </Row>
+                  </Col>
+                </TabPane>
             </TabContent>
             {/*  
             <Row>
