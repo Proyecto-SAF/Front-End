@@ -15,7 +15,7 @@ import {
   Container,
 } from "reactstrap";
 
-function ProfileNavbar() {
+function HomeNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -38,12 +38,12 @@ function ProfileNavbar() {
     };
   });
   return (
-    <>
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <>
+          <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
                 <Container>
                   <NavLink  to="/landing-page" tag={Link}
                   >
-                   SAF
+                    SAF
                   </NavLink>
                   <button
                     onClick={() => {
@@ -52,39 +52,28 @@ function ProfileNavbar() {
                     }}
                     aria-expanded={collapseOpen}
                     className="navbar-toggler"
-                    type="button"
                   >
                     <span className="navbar-toggler-bar bar1"></span>
                     <span className="navbar-toggler-bar bar2"></span>
                     <span className="navbar-toggler-bar bar3"></span>
                   </button>
                   <Collapse isOpen={collapseOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                      <NavItem>
-                        <NavLink to="/profile-page" tag={Link}
-                        >
-                          <i
-                            aria-hidden={true}
-                            className="now-ui-icons users_single-02"
-                          ></i>
-                        </NavLink>
-                      </NavItem>
+                    <Nav navbar>
+                      
+                   
                       <UncontrolledDropdown nav>
                         <DropdownToggle
+                          aria-haspopup={true}
                           caret
                           color="default"
-                          href="#pablo"
+                          href="http://example.com?ref=creativetim"
                           nav
-                          onClick={(e) => e.preventDefault()}
                         >
-                          <i
-                            aria-hidden={true}
-                            className="now-ui-icons ui-1_settings-gear-63"
-                          ></i>
+                          <p>Actividades</p>
                         </DropdownToggle>
-                        <DropdownMenu right>
+                        <DropdownMenu>
                           <DropdownItem
-                            href="pills3"
+                            href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
                             Action
@@ -101,28 +90,18 @@ function ProfileNavbar() {
                           >
                             Something else here
                           </DropdownItem>
-                          <div className="divider"></div>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Separated link
-                          </DropdownItem>
-                          <div className="divider"></div>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            One more separated link
-                          </DropdownItem>
                         </DropdownMenu>
-                      </UncontrolledDropdown>
+                          </UncontrolledDropdown>
+                            <NavLink color="default" to="/registerprod-page" tag={Link}>
+                  <i className="now-ui-icons users_circle-08 "></i>
+                  ZONA PRODUCTOR
+              </NavLink>
                     </Nav>
                   </Collapse>
                 </Container>
               </Navbar>
-    </>
-  );
+        </> 
+        );
 }
 
-export default ProfileNavbar;
+export default HomeNavbar;

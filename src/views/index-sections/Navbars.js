@@ -162,7 +162,7 @@ function Navbars() {
                             className="now-ui-icons ui-1_settings-gear-63"
                           ></i>
                         </DropdownToggle>
-                        <DropdownMenu right>
+                        <DropdownMenu>
                           <DropdownItem header tag="a">
                             Dropdown header
                           </DropdownItem>

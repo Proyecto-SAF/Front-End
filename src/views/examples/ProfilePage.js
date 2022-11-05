@@ -15,6 +15,7 @@ import {
 } from "reactstrap";
 
 // core components
+
 import ProfileNavbar from "components/Navbars/ProfileNavbar.js";
 import Agenda2 from "components/Headers/Agenda";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
@@ -104,7 +105,7 @@ function ProfilePage() {
                           setPills("2");
                         }}
                       >
-                        <i className="now-ui-icons location_world"></i>
+                        <i className="now-ui-icons ui-1_calendar-60"></i>
                       </NavLink>
                     </NavItem>
                 </Nav>

@@ -40,20 +40,6 @@ function ProfilePageHeader() {
           </div>
           <h3 className="title">Roberto Carabajal</h3>
           <p className="category">Productor agropecuario</p>
-          <div className="content">
-            <div className="social-description">
-              <h2>26</h2>
-              <p>Commentarios</p>
-            </div>
-            <div className="social-description">
-              <h2>12</h2>
-              <p>Seguidores</p>
-            </div>
-            <div className="social-description">
-              <h2>48</h2>
-              <p>Publicaciones</p>
-            </div>
-          </div>
         </Container>
       </div>
     </>
