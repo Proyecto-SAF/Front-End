@@ -67,31 +67,16 @@ const MapView = () => {
                     <div>
                     <MapContainer center={center} zoom={13} ref={mapRef} >
                         <FeatureGroup>
-                            <EditControl 
-                                position="topright"
-                                onCreated={_onCreate}
-                                onEdited={_onEdited}
-                                onDeleted={_onDeleted}
-                                draw={{
-                                    rectangle: false,
-                                    package: false,
-                                    polygon: false,
-                                    polyline: false,
-                                    circle: false,
-                                    circlemarker: false,
-                              
-                                }} 
-                            />
-                            <Marker position={{ lat: '-26.18064675300086', lng: '-58.188628961794805' }}>
+                            <Marker position={{ lat: '-26.180058876227015', lng: '-58.188880131680094' }}>
           <Popup>
-            <span>  Aqui se realiza el programa SAF</span>
+            <span>Aqui se realiza el programa SAF.</span>
           </Popup>
         </Marker>
-                             <Popup>
+                             {/* <Popup>
                                 <div className="text-center">
                 Aqui se realiza el programa SAF
                                 </div>
-                            </Popup>
+                            </Popup> */}
                         </FeatureGroup>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

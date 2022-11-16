@@ -45,7 +45,7 @@ function ProfileAdminPage() {
         <ProfileAdminHeader />
         <div className="section">
           <Container>
-            <Col md="5">
+            <Col>
               <div
                 className="image-container image-left"
                 style={{
@@ -86,11 +86,12 @@ function ProfileAdminPage() {
                   </Nav>
                 </div>
               </Col>
+
               <TabContent className="gallery" activeTab={"pills" + pills}>
                 <TabPane tabId="pills3">
-                  <Col className="ml-auto mr-auto" md="10">
+                  <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                     <Row className="collections">
-                      <Col md="9">
+                      <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                         <h2 className="title">Mapa SAF</h2>
                         <p className="description">
                           Marca en este mapa donde se realizara el Prorgrama
@@ -114,9 +115,7 @@ function ProfileAdminPage() {
                           </p>
                           <Row>
                             <Col
-                              className="text-center ml-auto mr-auto"
-                              lg="6"
-                              md="8"
+                             className="text-center ml-auto mr-auto" lg="6" md="8"
                             >
                               <InputGroup
                                 className={

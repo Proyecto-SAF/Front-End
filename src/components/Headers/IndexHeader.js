@@ -2,7 +2,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container, Button, Col } from "reactstrap";
 // core components
 
 function IndexHeader() {
@@ -28,43 +28,33 @@ function IndexHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg6.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
+        
         <Container>
-          <div className="content-center brand">
+        <Col className="ml-auto mr-auto" md="4">
             <img
               alt="..."
               className="n-logo"
               src={require("assets/img/now-logo.png")}
             ></img>
-            <h1 className="h1-seo">Now UI Kit.</h1>
-            <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
-          </div>
-          <h6 className="category category-absolute">
-            Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-              <img
-                alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
-              ></img>
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-            >
-              <img
-                alt="..."
-                className="creative-tim-logo"
-                src={require("assets/img/creative-tim-white-slim2.png")}
-              ></img>
-            </a>
-            .
-          </h6>
+        </Col>
+            <h3 className="title">En este mapa podras encontrar donde se esta relizando el programa SAF</h3>
+            <Button
+                className="btn-round btn-icon"
+                color="info"
+                size="lg"
+                href="id=Map"
+              >
+              <span aria-hidden="true">
+               <i className="now-ui-icons arrows-1_minimal-down"></i>
+              </span>
+              </Button>
+           
         </Container>
+        
       </div>
     </>
   );

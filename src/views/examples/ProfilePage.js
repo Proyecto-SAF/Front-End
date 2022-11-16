@@ -17,7 +17,7 @@ import {
 // core components
 
 import ProfileNavbar from "components/Navbars/ProfileNavbar.js";
-import Agenda2 from "components/Headers/Agenda";
+import Agenda from "components/Agenda/Agenda";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
@@ -141,7 +141,7 @@ function ProfilePage() {
                   <Col className="ml-auto mr-auto" md="40">
                     <Row className="collections">
                       <Col md="12">
-                        <Agenda2 />
+                        <Agenda />
                       </Col>
                     </Row>
                   </Col>

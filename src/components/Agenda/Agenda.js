@@ -1,5 +1,6 @@
 import 'react-agenda/build/styles.css';
 import 'react-datetime/css/react-datetime.css';
+// @flow
 import React, { Component } from 'react';
 import moment from 'moment';
 import { ReactAgenda , ReactAgendaCtrl, guid , getUnique , getLast , getFirst , Modal } from 'react-agenda';
