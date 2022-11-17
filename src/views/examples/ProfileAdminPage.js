@@ -69,7 +69,7 @@ function ProfileAdminPage() {
                     setPills("2");
                   }}
                 >
-                  <i className="now-ui-icons ui-1_calendar-60"></i>
+                  <i className="now-ui-icons education_paper"></i>
                 </NavLink>
               </NavItem>
             </Nav>
@@ -79,12 +79,12 @@ function ProfileAdminPage() {
         <TabContent className="gallery" activeTab={"pills" + pills}>
           <TabPane tabId="pills3">
             <Col className="text-center ml-auto mr-auto">
-              <Row className="collections">
+              
                 <h2 className="title">
                   Marca en este mapa donde se realizara el Prorgrama SAF
                 </h2>
                 <MapView />
-              </Row>
+             
             </Col>
           </TabPane>
           <TabPane tabId="pills2">

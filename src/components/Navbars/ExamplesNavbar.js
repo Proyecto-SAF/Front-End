@@ -68,14 +68,12 @@ function ExamplesNavbar() {
               <DropdownItem header tag="a">
                 MENU
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Action
+              <DropdownItem href="/home-page" target="_blank">
+                Donde se realiza
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Another action
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Something else here
+              <DropdownItem href="/recetarios-page"
+                    target="_blank">
+                Recetarios
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
               <DropdownItem href="/maparegprod-page" onClick={(e) => e.preventDefault()}>
@@ -83,7 +81,7 @@ function ExamplesNavbar() {
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                One more separated link
+                Sobre nosotros
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
