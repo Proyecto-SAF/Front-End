@@ -7,9 +7,7 @@ import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
-  NavbarBrand,
   Navbar,
-  NavItem,
   NavLink,
   Nav,
   Container,
@@ -38,70 +36,59 @@ function HomeNavbar() {
     };
   });
   return (
-      <>
-          <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
-                <Container>
-                  <NavLink  to="/landing-page" tag={Link}
+    <>
+      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+        <Container>
+          <NavLink to="/landing-page" tag={Link}>
+            SAF
+          </NavLink>
+          <button
+            onClick={() => {
+              document.documentElement.classList.toggle("nav-open");
+              setCollapseOpen(!collapseOpen);
+            }}
+            aria-expanded={collapseOpen}
+            className="navbar-toggler"
+          >
+            <span className="navbar-toggler-bar bar1"></span>
+            <span className="navbar-toggler-bar bar2"></span>
+            <span className="navbar-toggler-bar bar3"></span>
+          </button>
+          <Collapse isOpen={collapseOpen} navbar>
+            <Nav navbar>
+              <UncontrolledDropdown nav>
+                <DropdownToggle aria-haspopup={true} caret color="default" nav>
+                  <p>Actividades</p>
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem href="/recetarios-page" target="_blank">
+                    Recetarios
+                  </DropdownItem>
+
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
                   >
-                    SAF
-                  </NavLink>
-                  <button
-                    onClick={() => {
-                      document.documentElement.classList.toggle("nav-open");
-                      setCollapseOpen(!collapseOpen);
-                    }}
-                    aria-expanded={collapseOpen}
-                    className="navbar-toggler"
+                    Noticias
+                  </DropdownItem>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
                   >
-                    <span className="navbar-toggler-bar bar1"></span>
-                    <span className="navbar-toggler-bar bar2"></span>
-                    <span className="navbar-toggler-bar bar3"></span>
-                  </button>
-                  <Collapse isOpen={collapseOpen} navbar>
-                    <Nav navbar>
-                      
-                   
-                      <UncontrolledDropdown nav>
-                        <DropdownToggle
-                          aria-haspopup={true}
-                          caret
-                          color="default"
-                          href="http://example.com?ref=creativetim"
-                          nav
-                        >
-                          <p>Actividades</p>
-                        </DropdownToggle>
-                        <DropdownMenu>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Action
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Another action
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Something else here
-                          </DropdownItem>
-                        </DropdownMenu>
-                          </UncontrolledDropdown>
-                            <NavLink color="default" to="/registerprod-page" tag={Link}>
-                  <i className="now-ui-icons users_circle-08 "></i>
-                  ZONA PRODUCTOR
+                    Sobre nosotros
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavLink color="default" to="/registerprod-page" tag={Link}>
+                <i className="now-ui-icons users_circle-08 "></i>
+                ZONA PRODUCTOR
               </NavLink>
-                    </Nav>
-                  </Collapse>
-                </Container>
-              </Navbar>
-        </> 
-        );
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
+    </>
+  );
 }
 
 export default HomeNavbar;

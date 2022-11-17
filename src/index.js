@@ -9,15 +9,17 @@ import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 // pages for this kit
 import Index from "views/Index.js";
+import Pdf from "components/Funcionales/PdfView.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import RegisterProdPage from "views/examples/RegisterProdPage";
 import LandingPage from "views/examples/LandingPage.js";
 import SignUpPage from "../src/views/index-sections/SignUp.js";
 import HomePage from "views/examples/HomePage";
+import RecetariosPage from "views/examples/RecetariosPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import ProfileAdminPage from "views/examples/ProfileAdminPage.js";
-import MapaRegProdPage from "components/Headers/MapaRegProd.js";
+import MapaRegProdPage from "components/Funcionales/MapaRegProd.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -37,6 +39,14 @@ root.render(
          <Route
           path="/home-page"
           render={(props) => <HomePage {...props} />}
+        />
+        <Route
+          path="/recetarios-page"
+          render={(props) => <RecetariosPage {...props} />}
+        />
+        <Route
+          path="/pdf-page"
+          render={(props) => <Pdf {...props} />}
         />
         <Route
           path="/profile-page"

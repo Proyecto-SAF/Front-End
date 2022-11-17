@@ -1,6 +1,6 @@
 import React from "react";
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import { Container } from "reactstrap";
 
 // core components
 
@@ -32,7 +32,7 @@ function HomePageHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">En este mapa podras encontrar donde se esta relizando el programa SAF</h1>
+            <h1 className="title">Aqui podras encontrar recetarios de interes.</h1>
             <div className="text-center">
          
             </div>
