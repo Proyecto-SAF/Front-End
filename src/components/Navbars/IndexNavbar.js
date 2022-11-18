@@ -91,7 +91,7 @@ function IndexNavbar() {
                   </NavLink>
                   <DropdownItem
                     href="/recetarios-page"
-                    target="_blank"
+                  
                   >
                     <i className="now-ui-icons education_agenda-bookmark"></i>
                     Recetarios

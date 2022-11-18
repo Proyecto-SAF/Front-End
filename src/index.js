@@ -45,7 +45,7 @@ root.render(
           render={(props) => <RecetariosPage {...props} />}
         />
         <Route
-          path="/pdf-page"
+          path="/pdf-page/:urlpdf"
           render={(props) => <Pdf {...props} />}
         />
         <Route

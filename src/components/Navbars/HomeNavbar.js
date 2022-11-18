@@ -61,7 +61,7 @@ function HomeNavbar() {
                   <p>Actividades</p>
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem href="/recetarios-page" target="_blank">
+                  <DropdownItem href="/recetarios-page" >
                     Recetarios
                   </DropdownItem>
 

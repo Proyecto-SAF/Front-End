@@ -16,6 +16,7 @@ import {
 import HomeNavbar from "components/Navbars/HomeNavbar";
 import HomePageHeader from "components/Headers/HomePageHeader";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import { Link } from "react-router-dom";
 
 function RecetariosPage() {
   React.useEffect(() => {
@@ -43,13 +44,13 @@ function RecetariosPage() {
                 <CardHeader></CardHeader>
                 <CardBody>
                   <TabContent className="text-center">
-                    <a href="/pdf-page" target="_blank">
+                    <Link to={`/pdf-page/${1}`} target="_blank">
                       <img
                         alt="..."
                         className="n-logo"
                         src={require("assets/img/PortadaPDF.png")}
                       ></img>
-                    </a>
+                    </Link>
                   </TabContent>
                 </CardBody>
               </Card>
@@ -59,13 +60,13 @@ function RecetariosPage() {
                 <CardHeader></CardHeader>
                 <CardBody>
                   <TabContent className="text-center">
-                    <a href="/pdf-page" target="_blank">
+                  <Link to={`/pdf-page/${2}`} target="_blank">
                       <img
                         alt="..."
                         className="n-logo"
                         src={require("assets/img/PortadaPDF_2.png")}
                       ></img>
-                    </a>
+                    </Link>
                   </TabContent>
                 </CardBody>
               </Card>
@@ -75,13 +76,13 @@ function RecetariosPage() {
                 <CardHeader></CardHeader>
                 <CardBody>
                   <TabContent className="text-center">
-                    <a href="/pdf-page" target="_blank">
+                  <Link to={`/pdf-page/${3}`} target="_blank">
                       <img
                         alt="..."
                         className="n-logo"
                         src={require("assets/img/PortadaPDF_3.png")}
                       ></img>
-                    </a>
+                    </Link>
                   </TabContent>
                 </CardBody>
               </Card>

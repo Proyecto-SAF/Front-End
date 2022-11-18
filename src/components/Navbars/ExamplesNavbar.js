@@ -68,11 +68,11 @@ function ExamplesNavbar() {
               <DropdownItem header tag="a">
                 MENU
               </DropdownItem>
-              <DropdownItem href="/home-page" target="_blank">
+              <DropdownItem href="/home-page" >
                 Donde se realiza
               </DropdownItem>
               <DropdownItem href="/recetarios-page"
-                    target="_blank">
+                   >
                 Recetarios
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
