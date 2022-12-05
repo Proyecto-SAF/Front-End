@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 // core components
 
-function ProfilePageHeader() {
+function NoticiasPageHeader() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -30,20 +30,21 @@ function ProfilePageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg5.jpeg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg5.jpeg") + ")",
           }}
           ref={pageHeader}
         ></div>
-        <Container>
-          <div className="photo-container">
-            <img alt="..." src={require("assets/img/ryan.jpg")}></img>
-          </div>
-          <h3 className="title">Roberto Carabajal</h3>
-          <p className="category">Productor agropecuario</p>
-        </Container>
+         <div className="content-center">
+          <Container>
+            <h1 className="title">Aqui podras encontrar las noticias del programa SAF</h1>
+            <div className="text-center">
+         
+            </div>
+          </Container>
+        </div>
       </div>
     </>
   );
 }
 
-export default ProfilePageHeader;
+export default NoticiasPageHeader;

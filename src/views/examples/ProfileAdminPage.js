@@ -81,10 +81,10 @@ function ProfileAdminPage() {
             <Col className="text-center ml-auto mr-auto">
               
                 <h2 className="title">
-                  Marca en este mapa donde se realizara el Prorgrama SAF
+                  Marca en este mapa donde se realizara el Programa SAF
                 </h2>
                 <MapView />
-             
+                
             </Col>
           </TabPane>
           <TabPane tabId="pills2">

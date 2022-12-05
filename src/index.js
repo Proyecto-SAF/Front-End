@@ -14,12 +14,13 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import RegisterProdPage from "views/examples/RegisterProdPage";
 import LandingPage from "views/examples/LandingPage.js";
-import SignUpPage from "../src/views/index-sections/SignUp.js";
+import SignUpPage from "./views/examples/SignUp.js";
 import HomePage from "views/examples/HomePage";
+import CatalogoPage from "views/examples/CatalogoPage.js";
 import RecetariosPage from "views/examples/RecetariosPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import ProfileAdminPage from "views/examples/ProfileAdminPage.js";
-import MapaRegProdPage from "components/Funcionales/MapaRegProd.js";
+import NoticiasPage from "views/examples/NoticiasPage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -44,6 +45,10 @@ root.render(
           path="/recetarios-page"
           render={(props) => <RecetariosPage {...props} />}
         />
+         <Route
+          path="/catalogo-page"
+          render={(props) => <CatalogoPage {...props} />}
+        />
         <Route
           path="/pdf-page/:urlpdf"
           render={(props) => <Pdf {...props} />}
@@ -57,8 +62,8 @@ root.render(
           render={(props) => <ProfileAdminPage {...props} />}
         />
         <Route
-          path="/maparegprod-page"
-          render={(props) => <MapaRegProdPage {...props} />}
+          path="/noticias-page"
+          render={(props) => <NoticiasPage {...props} />}
         />
         <Route
           path="/SignUp-page"

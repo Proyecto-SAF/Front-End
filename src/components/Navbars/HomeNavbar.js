@@ -64,10 +64,14 @@ function HomeNavbar() {
                   <DropdownItem href="/recetarios-page" >
                     Recetarios
                   </DropdownItem>
-
                   <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
+                    href="/catalogo-page"
+                 
+                  >
+                    Catalogo de Productos
+                  </DropdownItem>
+                  <DropdownItem
+                    href="/noticias-page"
                   >
                     Noticias
                   </DropdownItem>

@@ -65,7 +65,7 @@ const MapView = () => {
         <div className='row'>
             <div className='col text-center'>
                     <div>
-                    <MapContainer center={center} zoom={13} ref={mapRef} >
+                    <MapContainer center={center} zoom={12} ref={mapRef} >
                         <FeatureGroup>
                             <EditControl 
                                 position="topright"
@@ -85,12 +85,36 @@ const MapView = () => {
                             <Marker position={{ lat: '-26.18064675300086', lng: '-58.188628961794805' }}>
           <Popup>
             <span>  Aqui se realiza el programa SAF</span>
+            <br></br>
+            <span>
+            desde las 7:30hs a 12:30hs
+            </span>
+          </Popup>
+        </Marker>
+        <Marker position={{ lat: '-26.18064675300086', lng: '-58.188628961794805' }}>
+          <Popup>
+            <span>  Aqui se realiza el programa SAF</span>
+            <br></br>
+            <span>
+            desde las 7:30hs a 12:30hs
+            </span>
+          </Popup>
+          </Marker>
+        <Marker position={{ lat: '-26.136743613236106', lng: '-58.16033699937402' }}>
+          <Popup>
+            <span>Aqui se realiza el programa SAF.</span>
+            <br></br>
+            <span>
+            desde las 7:30hs a 12:30hs
+            </span>
           </Popup>
         </Marker>
                              <Popup>
-                                <div className="text-center">
-                Aqui se realiza el programa SAF
-                                </div>
+                             <span>Aqui se realiza el programa SAF.</span>
+            <br></br>
+            <span>
+            desde las 7:30hs a 12:30hs
+            </span>
                             </Popup>
                         </FeatureGroup>
                         <TileLayer

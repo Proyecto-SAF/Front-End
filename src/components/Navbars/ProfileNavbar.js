@@ -85,36 +85,28 @@ function ProfileNavbar() {
                         <DropdownMenu right>
                           <DropdownItem
                             href="pills3"
-                            onClick={(e) => e.preventDefault()}
                           >
-                            Action
+                            Editar perfil 
                           </DropdownItem>
                           <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
+                            href="/landing-page"
+                            
                           >
-                            Another action
+                            Realizar reclamo
                           </DropdownItem>
                           <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
+                            href="/recetarios-page"
                           >
-                            Something else here
+                            Recetarios
                           </DropdownItem>
                           <div className="divider"></div>
                           <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
+                            href="/home-page"
+                           
                           >
-                            Separated link
+                            Donde se Realizar
                           </DropdownItem>
                           <div className="divider"></div>
-                          <DropdownItem
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            One more separated link
-                          </DropdownItem>
                         </DropdownMenu>
                       </UncontrolledDropdown>
                     </Nav>

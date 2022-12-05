@@ -87,6 +87,102 @@ function RecetariosPage() {
                 </CardBody>
               </Card>
             </Col>
+            <Col md="4">
+              <Card>
+                <CardHeader></CardHeader>
+                <CardBody>
+                  <TabContent className="text-center">
+                  <Link to={`/pdf-page/${4}`} target="_blank">
+                      <img
+                        alt="..."
+                        className="n-logo"
+                        src={require("assets/img/PortadaPDF_8.png")}
+                      ></img>
+                    </Link>
+                  </TabContent>
+                </CardBody>
+              </Card>
+                      </Col>
+                      <Col md="4">
+              <Card>
+                <CardHeader></CardHeader>
+                <CardBody>
+                  <TabContent className="text-center">
+                  <Link to={`/pdf-page/${5}`} target="_blank">
+                      <img
+                        alt="..."
+                        className="n-logo"
+                        src={require("assets/img/PortadaPDF_5.png")}
+                      ></img>
+                    </Link>
+                  </TabContent>
+                </CardBody>
+              </Card>
+                      </Col>
+                      <Col md="4">
+              <Card>
+                <CardHeader></CardHeader>
+                <CardBody>
+                  <TabContent className="text-center">
+                  <Link to={`/pdf-page/${6}`} target="_blank">
+                      <img
+                        alt="..."
+                        className="n-logo"
+                        src={require("assets/img/PortadaPDF_6.png")}
+                      ></img>
+                    </Link>
+                  </TabContent>
+                </CardBody>
+              </Card>
+                      </Col>
+                      <Col md="4">
+              <Card>
+                <CardHeader></CardHeader>
+                <CardBody>
+                  <TabContent className="text-center">
+                  <Link to={`/pdf-page/${7}`} target="_blank">
+                      <img
+                        alt="..."
+                        className="n-logo"
+                        src={require("assets/img/PortadaPDF_7.png")}
+                      ></img>
+                    </Link>
+                  </TabContent>
+                </CardBody>
+              </Card>
+                      </Col>
+                      <Col md="4">
+              <Card>
+                <CardHeader></CardHeader>
+                <CardBody>
+                  <TabContent className="text-center">
+                  <Link to={`/pdf-page/${8}`} target="_blank">
+                      <img
+                        alt="..."
+                        className="n-logo"
+                        src={require("assets/img/PortadaPDF_4.png")}
+                      ></img>
+                    </Link>
+                  </TabContent>
+                </CardBody>
+              </Card>
+                      </Col>
+                      <Col md="4">
+              <Card>
+                <CardHeader></CardHeader>
+                <CardBody>
+                  <TabContent className="text-center">
+                  <Link to={`/pdf-page/${9}`} target="_blank">
+                      <img
+                        alt="..."
+                        className="n-logo"
+                        src={require("assets/img/PortadaPDF_9.png")}
+                      ></img>
+                    </Link>
+                  </TabContent>
+                </CardBody>
+              </Card>
+                      </Col>
           </Row>
         </Container>
       </div>

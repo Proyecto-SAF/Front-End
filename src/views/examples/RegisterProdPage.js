@@ -166,7 +166,7 @@ setResgistrado(true)
         <div className="content">
           <Container>
             <Col className="ml-auto mr-auto" md="4">
-              <Card className="card-login card-plain">
+            <Card className="card-signup" data-background-color="blue">
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                     <div className="logo-container">

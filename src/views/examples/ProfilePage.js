@@ -102,8 +102,8 @@ function ProfilePage() {
                         <Iframe
                           allowFullScreen
                           style="border: none;"
-                          height="500"
-                          width="800"
+                          height="600"
+                          width="900"
                           src="http://localhost:8082/mapstore/#/context/RegionesPROD"
                         ></Iframe>
                       </div>

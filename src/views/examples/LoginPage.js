@@ -7,7 +7,9 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
+  Label,
   Form,
+  FormGroup,
   Input,
   InputGroupAddon,
   InputGroupText,
@@ -145,7 +147,7 @@ setResgistrado(true)
         <div className="content">
           <Container>
             <Col className="ml-auto mr-auto" md="4">
-              <Card className="card-login card-plain">
+            <Card className="card-signup" data-background-color="blue">
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                     <div className="logo-container">
@@ -207,6 +209,13 @@ setResgistrado(true)
                         onChange={(e)=>{setPassword(e.target.value)}}
                       ></Input>
                     </InputGroup>
+                    <FormGroup check>
+                <Label check>
+                  <Input type="checkbox"></Input>
+                  <span className="form-check-sign"></span>
+                  ¿Quieres recibir noticias del SAF?
+                </Label>
+              </FormGroup>
                     <Button
                     className="btn-neutral btn-round"
                     color="info"

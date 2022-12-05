@@ -51,7 +51,7 @@ function ExamplesNavbar() {
       ) : null}
       <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
         <Container>
-          <UncontrolledDropdown className="button-dropdown">
+        <UncontrolledDropdown className="button-dropdown">
             <DropdownToggle
               caret
               data-toggle="dropdown"
@@ -71,13 +71,17 @@ function ExamplesNavbar() {
               <DropdownItem href="/home-page" >
                 Donde se realiza
               </DropdownItem>
-              <DropdownItem href="/recetarios-page"
+              <DropdownItem href="/catalogo-page"
                    >
-                Recetarios
+                Catalogo de Productos
+              </DropdownItem>
+              <DropdownItem href="/noticias-page"
+                   >
+                Noticias SAF
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
-              <DropdownItem href="/maparegprod-page" onClick={(e) => e.preventDefault()}>
-                Mapa de producción por regiones
+              <DropdownItem href="/recetarios-page" >
+              Recetarios
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -86,6 +90,7 @@ function ExamplesNavbar() {
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
+          
             <NavLink  to="/landing-page" tag={Link}
             >
               SAF
@@ -110,6 +115,7 @@ function ExamplesNavbar() {
             navbar
           >
             <Nav navbar>
+          
               <NavItem>
                 <NavLink to="/SignUp-page" tag={Link}>
                   INICIAR SESION
@@ -135,7 +141,7 @@ function ExamplesNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  href="https://www.facebook.com/Programasoberaniaalimentaria"
                   target="_blank"
                   id="facebook-tooltip"
                 >
@@ -159,6 +165,7 @@ function ExamplesNavbar() {
                   Follow us on Instagram
                 </UncontrolledTooltip>
               </NavItem>
+           
             </Nav>
           </Collapse>
         </Container>

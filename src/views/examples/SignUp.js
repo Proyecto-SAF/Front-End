@@ -194,7 +194,7 @@ window.localStorage.setItem(
                     </InputGroupAddon>
                     <Input
                       placeholder="Email..."
-                      type="text"
+                      color="white"
                       onChange={(e)=>{setEmail(e.target.value)}}
                     ></Input>
                   </InputGroup>
