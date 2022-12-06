@@ -91,7 +91,7 @@ function CatalogoPage() {
             <Row className="text-center ml-auto mr-auto" lg="6" md="8">
               {!data.length ? (
                 <div className="vacio">
-                  <p>Cargargando...</p>
+                  <p>Cargando...</p>
                   <div class="d-flex justify-content-center">
   <div class="spinner-border" role="status">
   </div>

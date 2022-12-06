@@ -43,6 +43,9 @@ function ProfileAdminPage() {
       <Container>
         <Col className="ml-auto mr-auto" md="4">
           <div className="nav-align-center">
+          <h2 className="title text-center">
+                  Marca y Comunica
+              </h2>
             <Nav
               className="nav-pills-info nav-pills-just-icons"
               pills
@@ -78,17 +81,19 @@ function ProfileAdminPage() {
 
         <TabContent className="gallery" activeTab={"pills" + pills}>
           <TabPane tabId="pills3">
-            <Col className="text-center ml-auto mr-auto">
+            <Col className="ml-auto mr-auto" md="5">
               
                 <h2 className="title">
                   Marca en este mapa donde se realizara el Programa SAF
                 </h2>
-                <MapView />
                 
             </Col>
+            <div className="ml-auto mr-auto" md="4">
+            <MapView />
+            </div>
           </TabPane>
           <TabPane tabId="pills2">
-            <Col className="text-center" md="5">
+            <Col className="ml-auto mr-auto" md="5">
               <Row className="collections">
                 <div className=" text-center">
                   <h2 className="title">Noticias!!</h2>

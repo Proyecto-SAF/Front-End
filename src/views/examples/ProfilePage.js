@@ -20,6 +20,7 @@ import ProfileNavbar from "components/Navbars/ProfileNavbar.js";
 import Agenda from "components/Agenda/Agenda";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
+import EditorTexto from "components/Funcionales/EditorTexto";
 
 function ProfilePage() {
   const [pills, setPills] = React.useState("2");
@@ -50,7 +51,7 @@ function ProfilePage() {
             </h5>
             <Col className="ml-auto mr-auto" md="6">
               <h4 className="title text-center">
-                Mapa de produccion por Regiones
+                Tus actividades
               </h4>
               <div className="nav-align-center">
                 <Nav
@@ -82,6 +83,30 @@ function ProfilePage() {
                         <i className="now-ui-icons ui-1_calendar-60"></i>
                       </NavLink>
                     </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={pills === "1" ? "active" : ""}
+                        href="#pablo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setPills("1");
+                        }}
+                      >
+                        <i className="now-ui-icons location_map-big"></i>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={pills === "4" ? "active" : ""}
+                        href="#pablo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setPills("4");
+                        }}
+                      >
+                        <i className="now-ui-icons text_caps-small"></i>
+                      </NavLink>
+                    </NavItem>
                 </Nav>
               </div>
             </Col>
@@ -98,6 +123,39 @@ function ProfilePage() {
                 <Col className="ml-auto mr-auto" md="10">
                   <Row className="collections">
                     <Col md="6">
+                    <h4 className="title text-center">
+                Mapa de limitantes de Produccion
+              </h4>
+                      <div>
+                        <Iframe
+                          allowFullScreen
+                          style="border: none;"
+                          height="600"
+                          width="900"
+                          src="http://localhost:8082/mapstore/#/context/MapaLimit"
+                        ></Iframe>
+                      </div>
+                    </Col>
+                  </Row>
+                </Col>
+              </TabPane>
+              <TabPane tabId="pills2">
+                  <Col className="ml-auto mr-auto" md="40">
+                    <Row className="collections">
+                      <Col md="12">
+                        <Agenda />
+                        <EditorTexto />
+                      </Col>
+                    </Row>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="pills1">
+                <Col className="ml-auto mr-auto" md="10">
+                  <Row className="collections">
+                    <Col md="6">
+                    <h4 className="title text-center">
+                Mapa de Produccion por regiones y productores del SAF
+              </h4>
                       <div>
                         <Iframe
                           allowFullScreen
@@ -111,161 +169,16 @@ function ProfilePage() {
                   </Row>
                 </Col>
               </TabPane>
-              <TabPane tabId="pills2">
+            </TabContent>
+            <TabPane tabId="pills4">
                   <Col className="ml-auto mr-auto" md="40">
                     <Row className="collections">
                       <Col md="12">
-                        <Agenda />
+                        <EditorTexto />
                       </Col>
                     </Row>
                   </Col>
                 </TabPane>
-            </TabContent>
-            {/*  
-            <Row>
-              <Col className="ml-auto mr-auto" md="6">
-                <h4 className="title text-center">My Portfolio</h4>
-                <div className="nav-align-center">
-                  <Nav
-                    className="nav-pills-info nav-pills-just-icons"
-                    pills
-                    role="tablist"
-                  >
-                    <NavItem>
-                      <NavLink
-                        className={pills === "1" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("1");
-                        }}
-                      >
-                        <i className="now-ui-icons design_image"></i>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "2" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("2");
-                        }}
-                      >
-                        <i className="now-ui-icons location_world"></i>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "3" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("3");
-                        }}
-                      >
-                        <i className="now-ui-icons sport_user-run"></i>
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </div>
-              </Col>
-              <TabContent className="gallery" activeTab={"pills" + pills}>
-                <TabPane tabId="pills1">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg1.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="pills2">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg11.jpeg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="pills3">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                        <div>
-          <Iframe allowFullScreen style="border: none;" height="500" width="800" src="http://localhost:8082/mapstore/#/context/RegionesPROD"></Iframe></div> 
-       
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-              </TabContent>
-            </Row> */}
           </Container>
         </div>
         <DefaultFooter />
